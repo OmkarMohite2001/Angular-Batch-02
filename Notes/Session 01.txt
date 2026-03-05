@@ -1,0 +1,109 @@
+What is Angular?
+
+Angular is a javascript framework
+which is developed/designed /maintained by google
+
+There are 2 types of angular
+AngularJs and Angular
+
+Angular version 1 
+2009  Angular launched as name is AngularJs
+
+
+2016	Launch Angular 2
+They have decided every 6 months release new version 
+2026	current version is 21+
+
+It's Uses Typescript
+it's Uses MVC architecture 
+Mobile friendly
+Two way data binding
+Dependency Injection
+Directives
+Component based architecture 
+
+We need angular cli
+command line interface
+
+npm install -g @angular/cli
+npm install -g @angular/cli@<version name>
+
+
+
+ng version
+ng for angular it's specific keyword when using angular cli
+
+when new project we want to create we need this cmd
+ng new <project-name>
+
+first question > which css	> css/scss
+
+second question
+ Do you want to enable Server-Side Rendering (SSR) and Static Site Generation (SSG/Prerendering)? (y/N)
+ans > No
+
+ Which AI tools do you want to configure with Angular best practices? https://angular.dev/ai/develop-with-ai
+ans > none
+
+
+---------Folder Structure------
+.vscode		default vscode
+.nodemodules	this files stores all dependencies and definations
+public		assets/images/icons
+src		this folder is very important
+
+.editorconfig	skip
+.gitignore	unnecessary skip files declare
+angular.json	dependencies declarations
+
+package.json	node modules declarations dependencies
+ts files 
+
+spec		it's need with testing 
+
+src
+	index.html	starting html
+	main.ts		starting application
+	styles.css	global style sheet
+
+app	root folder	app.config,ts	
+		as component
+			app.css
+			app.html
+			app.ts
+			app.spec.tc
+
+	app.routes.ts	
+			all page routing is declared here
+
+
+
+starting application cmd
+	ng serve/ng s/npm start
+
+bydefault localhost 4200 port runable
+
+
+@component
+@	=> decorator
+
+component is a function
+which is parameter is object
+
+selector	>	name is used in application
+imort:[<library dependancies , names>]
+templateUrl		declare ehich html file or ui 
+styleUrl		
+
+
+how to generate component
+two ways are there
+1. custom component
+2. cli through
+
+
+cmd > 	ng generate component <component name>
+	ng g c <file name>
+
+
+
