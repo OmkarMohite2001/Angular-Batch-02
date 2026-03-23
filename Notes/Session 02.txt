@@ -1,0 +1,70 @@
+New Component ANd New Project
+
+html	>		ui/template
+css	>		stylesheet
+.ts	>		logic
+spec.ts	>		testing
+
+@Component
+
+{{<variable name/array/object/function>}}	>	interpolation
+
+(click) 		> event binding
+
+1.selector	>	component name we can rename also
+2.templateUrl	>	
+3.template	>	inline html
+4.stylesUrl	>	stylesheet link
+5.styles	>	inline css using array
+6.Standalone	>	by default angular15+ default true
+7.Import	>	Importing Libraries
+8.providers	>	using pipes
+9.changeDeteaction	
+10.encapsulation		
+	there are 3 types by default component based
+	global
+	shadow dom
+11	Host:	inline write code
+
+
+-----------Angular Life Cycle-------
+constructor		/	inject	is called dependency injection	<di>
+
+ngOnChanges
+
+ngOnInit
+
+ngDoCheck
+
+ngAfterContentInit
+
+ngAfterContentChecked
+
+ngafterViewInit
+
+ngAfterViewChecked
+
+ngOnDestroy
+
+------------------------------Parent Child Relation multiple ways---------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

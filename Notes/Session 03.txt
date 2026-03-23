@@ -1,0 +1,43 @@
+Data binding in angular
+
+There are two types of data binding
+1. one way communication
+2.two way communication
+
+Ts => Html (interpolation,Property Binding) 
+html => ts (Event binding)
+
+Html  => <= ts  (ngModel)
+
+interpolation{{<variable name or property name or data>}}
+
+internally uses ZONE.js  internally changeDetection library uses 
+
+when property binding we can use we need[]
+
+internaly uses dom
+
+element.src = <url>;
+
+event binding
+
+html => ts
+
+(event)="method()"
+
+internaly working
+
+element.addEventListener(<event Name>,()=>{
+this.method();
+})
+
+
+
+two way communication
+
+html => ts
+ts => html
+
+ngModel	required library that name is FormsModule
+
+whenever we use ngModel we need [(ngModel)]="variableName";
