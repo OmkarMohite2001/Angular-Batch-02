@@ -17,8 +17,8 @@ import { ChangeDetectionStrategy, Component, inject, ViewEncapsulation } from '@
   standalone: true,
   imports: [CommonModule],
   providers: [DatePipe],
-  changeDetection:ChangeDetectionStrategy.OnPush,
-  encapsulation:ViewEncapsulation.ShadowDom
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  encapsulation: ViewEncapsulation.ShadowDom,
 })
 export class Student {
   name: string = 'Fork Infosystem';
@@ -35,4 +35,8 @@ export class Student {
   }
 
   transformedDate = this.date.transform(new Date(), 'dd-MMM-yyyy');
+
+  imageUrl = 'https://picsum.photos/200/300';
+  isDisabled = false;
+  isActive = false;
 }
