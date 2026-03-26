@@ -1,0 +1,9 @@
+<h2>Student List</h2>
+
+@for (s of students; track s.id) {
+  <div class="item">
+    <a [routerLink]="['/student', s.id, 'sem3']">
+      View {{s.name}} Result
+    </a>
+  </div>
+}

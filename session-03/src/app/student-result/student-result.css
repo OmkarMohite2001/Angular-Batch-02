@@ -1,0 +1,11 @@
+.card {
+  border: 2px solid purple;
+  padding: 20px;
+  width: 300px;
+  border-radius: 10px;
+  background-color: #f3e5f5;
+}
+
+h2 {
+  color: purple;
+}
