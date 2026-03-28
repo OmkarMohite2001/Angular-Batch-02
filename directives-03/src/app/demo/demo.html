@@ -1,0 +1,59 @@
+<!-- <h1>Fork Infosystems</h1>
+<h2>{{date}} </h2>
+
+<p *ngIf="isVisible">Hello World this is If Condition</p>
+
+
+@if(isChecked){
+  <p>This Is Modern Way If Condition</p>
+}@else {
+  <p>Else Condition</p>
+}
+
+<button (click)="toggle()">Toggle</button> -->
+
+<!--
+<div *ngFor="let item of items;let i = index">
+  {{i + 1 }} - {{item}}
+</div>
+
+<br><hr>
+
+@for (a of arr;let i = $index; track a) {
+  <div>{{i + 1}} - {{a}} </div>
+}
+<br><hr>
+
+<div *ngFor="let s of students;let i = index">
+{{s.id}} - {{s.name}}
+</div>
+
+<br><hr>
+
+@for (s of students; let i = $index;track s.id) {
+  <div>
+    {{s.id}} - {{s.name}}
+  </div>
+}
+ -->
+
+
+ <div [ngSwitch]="role">
+    <p *ngSwitchCase="'admin'">Admin Panel</p>
+    <p *ngSwitchCase="'user'">User Panel</p>
+    <p *ngSwitchDefault>Guest</p>
+ </div>
+
+ <br><hr>
+
+ @switch(role){
+  @case ('admin') {
+    <p>Admin Panel Visible</p>
+  }
+  @case ('user') {
+    <p>User Panel Case</p>
+  }
+  @default {
+    <p>Guest User</p>
+  }
+ }
