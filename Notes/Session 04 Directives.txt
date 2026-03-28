@@ -1,0 +1,44 @@
+Directives
+
+There are Three types of directives 
+
+1.Component Directive
+	Component is special type od directive whicj is binds template(html) + logic (ts)
+
+using component as a html tag with another component is called component directive 
+
+2.Structural directive
+	DOM Add / remove 
+	
+	Common module
+	
+	before angular 17 version
+	*ngif,*ngfor,*ngswitch
+
+	after 17+
+	
+	@if,@for,@switch
+
+	
+3.Attribute 	
+	style/bhaviour changes
+
+In attribute directives there are  two types which is
+	1.ngClass
+
+	[ng Class]="condion "
+	2.ngStyle
+	
+	syntax
+	[ngStyle]="{<property name> :<variable> <condition turnery > }"
+
+
+Custom directive there are  two ways
+
+ng generate directive <name>
+
+
+let name = document.queryselector(".classname");
+
+
+
