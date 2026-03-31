@@ -1,0 +1,133 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  padding: 0 40px;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+
+  background: linear-gradient(90deg, #1e3a8a, #3b82f6);
+  backdrop-filter: blur(10px);
+  color: white;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Spacer */
+.spacer {
+  flex: 1;
+}
+
+/* Desktop Nav Links */
+.desktop-links a {
+  margin: 0 10px;
+  font-weight: 500;
+  color: white;
+  transition: 0.3s;
+}
+
+.desktop-links a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+}
+
+/* Active Link */
+.active {
+  border-bottom: 2px solid #f97316;
+}
+
+/* Desktop Auth Buttons */
+.desktop-auth-buttons button {
+  margin-left: 10px;
+}
+
+.register-btn {
+  background: #f97316;
+  color: white;
+  border-radius: 25px;
+  padding: 6px 18px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.register-btn:hover {
+  background: #ea580c;
+}
+
+/* Mobile Styles */
+.mobile-menu-button {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktop-links,
+  .desktop-auth-buttons {
+    display: none;
+  }
+
+  .mobile-menu-button {
+    display: block;
+  }
+
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #1e3a8a;
+    position: absolute;
+    top: 70px; /* Height of the navbar */
+    left: 0;
+    width: 100%;
+    z-index: 999; /* Below navbar, above content */
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  .mobile-menu a {
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    transition: background-color 0.3s;
+  }
+
+  .mobile-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  /* Make register button full width in mobile menu */
+  .mobile-menu .register-btn {
+    width: calc(100% - 40px);
+    margin-top: 10px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

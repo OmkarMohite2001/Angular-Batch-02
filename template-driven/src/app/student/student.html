@@ -1,0 +1,59 @@
+<div class="container mt-5">
+  <div class="card p-5 shadow mb-5">
+    <h3>{{editindex === -1 ? 'Add Student':'Update Student'}}</h3>
+
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+      <input
+        type="text"
+        name="name"
+        placeholder="Enter Name"
+        class="form-control mb-4"
+        [(ngModel)]="student.name"
+      />
+      <input
+        type="text"
+        name="email"
+        placeholder="Enter Email"
+        class="form-control mb-4"
+        [(ngModel)]="student.email"
+      />
+      <input
+        type="text"
+        name="course"
+        placeholder="Enter course"
+        class="form-control mb-4"
+        [(ngModel)]="student.course"
+      />
+
+      <button type="submit" class="btn btn-success">{{editindex === -1 ?'Save':'Update'}} </button>
+    </form>
+  </div>
+
+  <div class="card p4 shadow">
+    <h2>Student List</h2>
+    <table class="table table-bordered">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Course</th>
+            <th>Action</th>
+        </tr>
+
+        @for(s of students;let i = $index;track s){
+            <tr>
+                <td>{{s.name}} </td>
+                <td>{{s.email}} </td>
+                <td>{{s.course}} </td>
+                <td>
+                    <button class="btn btn-warning me-2" (click)="editStudent(s,i)">Edit</button>
+                    <button class="btn btn-danger" (click)="deleteStudent(i)">Delete</button>
+                </td>
+            </tr>
+
+        }
+    </table>
+  </div>
+</div>
+
+
+<button routerLink="/login" class="btn btn-success">Login</button>

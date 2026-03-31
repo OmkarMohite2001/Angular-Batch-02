@@ -1,0 +1,30 @@
+<mat-toolbar class="navbar">
+
+  <!-- Logo -->
+  <div class="logo" routerLink="/">
+    <img src="assets/Logo02.png" alt="logo">
+    <span>TrailAndTeach</span>
+  </div>
+
+  <span class="spacer"></span>
+
+  <!-- Desktop Navigation Links -->
+  <div class="desktop-links">
+    <a mat-button routerLink="/home" routerLinkActive="active">Home</a>
+    <a mat-button >Courses</a>
+    <a mat-button routerLink="/about" routerLinkActive="active">About</a>
+    <a mat-button routerLink="/contact" routerLinkActive="active">Contact</a>
+     <a mat-button routerLink="/user" routerLinkActive="active">User</a>
+  </div>
+
+  <!-- Desktop Auth Buttons -->
+  <div class="desktop-auth-buttons">
+    <button mat-button routerLink="/auth/login">Login</button>
+    <button mat-raised-button class="register-btn" routerLink="/auth/register">
+      Register
+    </button>
+  </div>
+
+</mat-toolbar>
+
+
