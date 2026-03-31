@@ -1,0 +1,26 @@
+Before Angular version 17 Angular cannot be standalone
+
+NgModule is a class thats groups related components,directives,pipes and services into a single unit.
+
+ng new <project new> --no-standalone
+
+app.module.ts
+
+1.module create	ng g module <name>
+2.component create
+
+Routing
+
+<router-outlet></router-outlet>
+
+
+routerlink
+
+
+wildcard route 404
+
+lazy loading
+
+parameter routes
+
+children :[]

@@ -1,0 +1,23 @@
+add these files in angular.json
+
+ "node_modules/bootstrap/dist/css/bootstrap.min.css"
+ "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+	npm install bootstrap
+
+or
+
+ng add @ng-bootstrap/ng-bootstrap
+
+
+Template driven form
+
+Template-driven forms use directive in the template to create and manage forms
+
+Template driven form is used for small applications
+
+library FormsModule
+
+in form tag we need syntax 
+#variableName="ngForm"
+
+in form name attribute compulsory and ngModel is compulsary
