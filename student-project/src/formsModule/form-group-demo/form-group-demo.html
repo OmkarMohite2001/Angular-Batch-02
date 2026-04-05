@@ -1,0 +1,17 @@
+<div class="container mt-4">
+  <h3 class="text-center mb-5">Employee Form Group</h3>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <input type="text" placeholder="Enter Name" formControlName="name">
+    <input type="email" placeholder="Enter emal" formControlName="email">
+    <select formControlName="gender">
+      <option value="">Select Option</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Other">Other</option>
+    </select>
+    <input type="number" placeholder="Enter Age" formControlName="age">
+    <div *ngIf="form.get('age')?.errors?.['underAge']">Age Error</div>
+    <button class="btn btn-primary" >Submit</button>
+  </form>
+</div>

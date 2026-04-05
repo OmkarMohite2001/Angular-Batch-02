@@ -1,0 +1,9 @@
+<div class="container" [ngClass]="isDark?'dark-theme':'light-theme'">
+  <h2 class="text-center p-10 m-10">This Is Angular Toggle Application</h2>
+
+  <button (click)="toggleMe()" class="btn btn-success">Toggle ME</button>
+
+  <P class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, cum.</P>
+
+  <p class="text-center">Current Theme : {{isDark ? 'Dark Mode':'Light Mode'}} </p>
+</div>
