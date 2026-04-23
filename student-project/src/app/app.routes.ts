@@ -5,6 +5,8 @@ import { MainLayout } from '../pages/main-layout/main-layout';
 import { ReactiveFormDemo } from '../formsModule/reactive-form-demo/reactive-form-demo';
 import { FormGroupDemo } from '../formsModule/form-group-demo/form-group-demo';
 import { ToggleTheme } from '../formsModule/toggle-theme/toggle-theme';
+import { University } from '../relationParentChild/university/university';
+import { Parent } from '../relationParentChild/parent/parent';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' }, // default login
@@ -19,6 +21,8 @@ export const routes: Routes = [
       { path: 'reactiveFormsDemo', component: ReactiveFormDemo },
       { path: 'formsGroupDemo', component: FormGroupDemo },
       { path: 'toggleThemeDemo', component: ToggleTheme },
+      { path: 'university', component: University },
+      { path: 'parent', component: Parent },
       { path: '', redirectTo: 'student', pathMatch: 'full' },
     ],
   },

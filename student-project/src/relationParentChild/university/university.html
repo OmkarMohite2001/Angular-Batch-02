@@ -1,0 +1,30 @@
+<!-- <h2>University Component</h2>
+<app-colleges [childData]="collegeData"></app-colleges> -->
+
+<div class="containet mt-5">
+  <h2 class="text-center mb-4 ">University Component</h2>
+  <div class="row">
+   @for (collegeD of collegesData; track $index) {
+    <div class="col-md-3 mb4">
+      <img class="card h-70 shadow" [src]="collegeD.image" style="cursor: pointer;" (click)="onSelectedCollege(collegeD)">
+      <div class="card-body">
+        <h4 class="cart-title">{{collegeD.name}}</h4>
+        <p><strong>Location : </strong>{{collegeD.location}} </p>
+        <p><strong>Principle : </strong>{{collegeD.principle}} </p>
+        <p><strong>Student Count : </strong>{{collegeD.studentCount}} </p>
+      </div>
+    </div>
+   }
+  </div>
+</div>
+
+@if(selectedCollege){
+  <div>
+    <app-colleges
+     [childCollege]="selectedCollege"
+    (collegeMessegeEvent)="recieveMessge($event)"
+    ></app-colleges>
+  </div>
+}
+
+<h1>{{messegeFromChild}} </h1>
