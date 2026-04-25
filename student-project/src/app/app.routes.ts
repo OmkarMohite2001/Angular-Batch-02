@@ -7,6 +7,8 @@ import { FormGroupDemo } from '../formsModule/form-group-demo/form-group-demo';
 import { ToggleTheme } from '../formsModule/toggle-theme/toggle-theme';
 import { University } from '../relationParentChild/university/university';
 import { Parent } from '../relationParentChild/parent/parent';
+import { StudentList } from '../services/student-list/student-list';
+import { StudentSummery } from '../services/student-summery/student-summery';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' }, // default login
@@ -23,6 +25,8 @@ export const routes: Routes = [
       { path: 'toggleThemeDemo', component: ToggleTheme },
       { path: 'university', component: University },
       { path: 'parent', component: Parent },
+      { path: 'student-list', component: StudentList },
+      { path: 'student-summery', component: StudentSummery },
       { path: '', redirectTo: 'student', pathMatch: 'full' },
     ],
   },
