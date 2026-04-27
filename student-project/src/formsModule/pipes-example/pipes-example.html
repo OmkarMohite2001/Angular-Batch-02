@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="row">
+        <p class="text-center pt-3">{{today | date}} </p>
+        <p class="text-center pt-3">{{today | date:'fullDate'}} </p>
+        <p class="text-center pt-3">{{today | date:'dd-MM-yyyy'}} </p>
+        <p class="text-center pt-3">{{today | date:'hh:mm a'}} </p>
+        <p class="text-center pt-3">{{today | date : 'short'}} </p>
+        <br><hr>
+         <p class="text-center pt-3">{{name | uppercase}} </p>
+         <p class="text-center pt-3">{{name | lowercase}} </p>
+ <br><hr>
+         <p class="text-center pt-3">{{salary |currency:'INR'}} </p>
+         <p class="text-center pt-3">{{salary |currency:'INR':'code'}} </p>
+         <br><hr>
+         <p class="text-center pt-3">{{marks |percent}} </p>
+         <p class="text-center pt-3">{{marks1 |percent}} </p>
+         <p class="text-center pt-3">{{marks2 |percent}} </p>
+         
+
+    </div>
+    <br><hr>
+    <div class="row">
+        <p class="text-center">Custom Pipes</p>
+        <div class="text-center pt-3">
+            <h1>{{85 | result}}</h1>
+        <h1>{{34 | result}}</h1>
+        </div>
+    </div>
+     <br><hr>
+    <div class="row">
+        <p class="text-center">Custom Pipes</p>
+        <div class="text-center pt-3">
+            <h1>{{'M' | gender}}</h1>
+        <h1>{{'F' | gender}}</h1>
+        <h1>{{'A' | gender}}</h1>
+        </div>
+    </div>
+     <br><hr>
+    <div class="row">
+        <p class="text-center">Custom Pipes</p>
+        <div class="text-center pt-3">
+            <h1>{{1 | status}}</h1>
+        <h1>{{2 | status}}</h1>
+        <h1>{{0 | status}}</h1>
+        </div>
+    </div>
+</div>

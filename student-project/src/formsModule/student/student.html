@@ -1,3 +1,12 @@
+<!-- @if(loading){
+    <div class="text-center mt-3">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading Data...</span>
+        </div>
+        <p>Please Wait</p>
+        
+    </div>
+} -->
 <div class="container mt-5">
     <div class="row">
         <div class="col-md-4">
@@ -6,17 +15,27 @@
                 <form #f="ngForm" (ngSubmit)="onSubmit(f)">
                     <div class="mb-3">
                         <label for="name" class="form-label">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Enter Name" class="form-control" [(ngModel)]="student.name" />
+                        <input type="text" id="name" name="name" placeholder="Enter Name" class="form-control"
+                            [(ngModel)]="student.name" />
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Enter Email" class="form-control" [(ngModel)]="student.email" />
+                        <input type="email" id="email" name="email" placeholder="Enter Email" class="form-control"
+                            [(ngModel)]="student.email" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="age" class="form-label">Age</label>
+                        <input type="number" id="age" name="age" placeholder="Enter Age" class="form-control"
+                            [(ngModel)]="student.age" />
                     </div>
                     <div class="mb-3">
                         <label for="course" class="form-label">Course</label>
-                        <input type="text" id="course" name="course" placeholder="Enter Course" class="form-control" [(ngModel)]="student.course" />
+                        <input type="text" id="course" name="course" placeholder="Enter Course" class="form-control"
+                            [(ngModel)]="student.course" />
                     </div>
-                    <button type="submit" class="btn btn-primary w-100">{{editindex === -1 ?'Add Student':'Update Student'}}</button>
+                    <button type="submit" class="btn btn-primary w-100">{{editindex === -1 ?'Add Student':'Update
+                        Student'}}</button>
                 </form>
             </div>
         </div>
@@ -30,6 +49,7 @@
                                 <th>Name</th>
                                 <th>Email</th>
                                 <th>Course</th>
+                                <th>Age</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -38,6 +58,7 @@
                             <tr>
                                 <td>{{s.name}}</td>
                                 <td>{{s.email}}</td>
+                                <td>{{s.age}}</td>
                                 <td>{{s.course}}</td>
                                 <td>
                                     <button class="btn btn-warning btn-sm me-2" (click)="editStudent(s,i)">Edit</button>

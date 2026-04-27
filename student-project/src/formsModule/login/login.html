@@ -1,36 +1,84 @@
-<!-- <form #f="ngForm" (ngSubmit)="onSubmit(f)">
-    <label >Username</label>
-  <input type="text" name="userName"  [(ngModel)]="userName">
-  <button type="submit">Submit</button>
-</form> -->
-<div class="container vh-100 d-flex justify-content-center align-items-center">
-    <div class="card p-5 shadow-lg">
-        <h2 class="text-center mb-4">Login</h2>
-        <form #f="ngForm" (ngSubmit)="onSubmit(f)">
-            <div class="mb-3">
-                <label for="username" class="form-label">Username</label>
-                <input type="text" id="username" name="username" [(ngModel)]="user.username" class="form-control" required minlength="3" #usernameCtrl="ngModel">
-                @if(usernameCtrl.invalid && usernameCtrl.touched){
-                <div class="text-danger mt-1">Username must be at least 3 characters</div>
-                }
-            </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" id="email" name="email" [(ngModel)]="user.email" class="form-control" required #emailCtrl="ngModel">
-                @if(emailCtrl.invalid && emailCtrl.touched){
-                <div class="text-danger mt-1">Please enter a valid email</div>
-                }
-            </div>
-            <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
-                <input type="password" id="password" name="password" [(ngModel)]="user.password" class="form-control" required #passwordCtrl="ngModel">
-                @if(passwordCtrl.invalid && passwordCtrl.touched){
-                <div class="text-danger mt-1">Password is required</div>
-                }
-            </div>
-            <div class="d-grid">
-                <button class="btn btn-primary" type="submit" [disabled]="f.invalid">Login</button>
-            </div>
-        </form>
+@if(loading){
+    <div class="text-center mt-3">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading Data...</span>
+        </div>
+        <p>Please Wait</p>
+        
     </div>
+}
+
+<div class="container vh-100 d-flex justify-content-center align-items-center">
+
+  <div class="card p-5 shadow-lg">
+    <h2 class="text-center mb-4">Login</h2>
+
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+
+      <!-- usernam -->
+      <div class="mb-3">
+        <label class="form-label">Username</label>
+
+        <input
+          type="text"
+          name="username"
+          [(ngModel)]="user.username"
+          class="form-control"
+          required
+          #usernameCtrl="ngModel"
+        >
+
+        @if(usernameCtrl.invalid && usernameCtrl.touched){
+          <div class="text-danger">
+            Please enter valid Username
+          </div>
+        }
+      </div>
+
+      <!-- Password -->
+      <div class="mb-3">
+        <label class="form-label">Password</label>
+
+        <input
+          type="password"
+          name="password"
+          [(ngModel)]="user.password"
+          class="form-control"
+          required
+          #passwordCtrl="ngModel"
+        >
+
+        @if(passwordCtrl.invalid && passwordCtrl.touched){
+          <div class="text-danger">
+            Password is required
+          </div>
+        }
+      </div>
+
+      <!-- Button -->
+      <div class="d-grid">
+        <button
+          class="btn btn-primary"
+          type="submit"
+          [disabled]="f.invalid">
+          Login
+        </button>
+      </div>
+
+      <!-- Success -->
+      @if(successMsg){
+        <div class="text-success text-center mt-3">
+          {{ successMsg }}
+        </div>
+      }
+
+      <!-- Error -->
+      @if(errorMsg){
+        <div class="text-danger text-center mt-3">
+          {{ errorMsg }}
+        </div>
+      }
+
+    </form>
+  </div>
 </div>

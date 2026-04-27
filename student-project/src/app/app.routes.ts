@@ -9,6 +9,7 @@ import { University } from '../relationParentChild/university/university';
 import { Parent } from '../relationParentChild/parent/parent';
 import { StudentList } from '../services/student-list/student-list';
 import { StudentSummery } from '../services/student-summery/student-summery';
+import { PipesExample } from '../formsModule/pipes-example/pipes-example';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' }, // default login
@@ -27,6 +28,7 @@ export const routes: Routes = [
       { path: 'parent', component: Parent },
       { path: 'student-list', component: StudentList },
       { path: 'student-summery', component: StudentSummery },
+      { path: 'pipes-example', component: PipesExample },
       { path: '', redirectTo: 'student', pathMatch: 'full' },
     ],
   },
