@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { College } from '../college';
+import { College } from '../models/college';
 
 @Component({
   selector: 'app-colleges',

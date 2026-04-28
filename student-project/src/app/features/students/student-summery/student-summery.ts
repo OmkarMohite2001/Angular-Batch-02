@@ -1,24 +1,31 @@
-import { Component, inject, OnInit } from '@angular/core';
-import { Student, StudentData } from '../student';
+import { Component, inject } from '@angular/core';
+import { StudentData ,Student} from '../../../core/services/student';
 import { CommonModule } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
+
 @Component({
-  selector: 'app-student-list',
+  selector: 'app-student-summery',
   imports: [CommonModule],
-  templateUrl: './student-list.html',
-  styleUrl: './student-list.css',
+  templateUrl: './student-summery.html',
+  styleUrl: './student-summery.css',
+  providers:[Student]
 })
-export class StudentList {
-  students:StudentData[]=[];
+export class StudentSummery {
+ students:StudentData[]=[];
   totalStudent:number = 0;
 
   // studServ = inject(Student);
+  // http = inject(HttpClient);
 
+  
   constructor(private studServ:Student){
     this.students = this.studServ.getStudent();
         this.totalStudent = this.studServ.getStudentCount();
 
   }
-  
+
+
+
   // ngOnInit(): void {
   //    this.students = this.studServ.getStudent();
   //        this.totalStudent = this.studServ.getStudentCount();
@@ -32,5 +39,4 @@ export class StudentList {
     this.students = this.studServ.getStudent();
     this.totalStudent = this.studServ.getStudentCount();
   };
-
 }

@@ -23,7 +23,7 @@ export class Auth {
       const headers = new HttpHeaders({
         Authorization:`Bearer ${token}`
       });
-      return this.http.get(this.apiUrlStud,{headers});
+      return this.http.get(this.apiUrlStud);
     }
 
     addStudent(data:any){
@@ -33,7 +33,7 @@ export class Auth {
         Authorization:`Bearer ${token}`
       });
 
-      return this.http.post(`this.apiUrlStud`,data,{headers});
+      return this.http.post(`this.apiUrlStud`,data);
 
     }
 }

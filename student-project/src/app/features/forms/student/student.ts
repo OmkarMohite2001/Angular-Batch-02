@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Auth } from '../../services/auth';
+import { Auth } from '../../../core/services/auth';
 
 @Component({
   selector: 'app-student',

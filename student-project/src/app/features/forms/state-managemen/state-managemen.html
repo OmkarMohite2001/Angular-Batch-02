@@ -1,0 +1,47 @@
+<div class="container mt-5">
+    <h2 class="text-center">Hospital Appointment Dashboard</h2>
+
+    <button class="btn btn-danger mb-3" (click)="toggleEmergencyMode()">
+        {{isEmergencyMode ? 'Disable Emergency Mode':'Enable Emergency Mode'}}
+    </button>
+
+    @if(isEmergencyMode){
+        <div class="alert alert-danger">Emergency Mode Active</div>
+    }
+
+    @if(loading){
+        <p>Loading Patients...</p>
+    }
+    <table class="table table-dashboard">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Doctor</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+
+        @for (patient of patients; track patient.id) {
+            <tr>
+                <td>{{patient.name}} </td>
+                <td>{{patient.age}} </td>
+                <td>{{patient.doctor}} </td>
+                <td>{{patient.status}} </td>
+                <td>
+                    <button class="btn btn-primary btn-sm" (click)="viewPatient(patient)">View</button>
+                </td>
+            </tr>
+        }
+    </table>
+
+    @if (selectedPatient) {
+        <div class="card p-4 mt-4">
+            <h3>Selected Patient Details</h3>
+            <p>Name {{selectedPatient.name}} </p>
+            <p>Doctor {{selectedPatient.doctor}} </p>
+            <p>Status {{selectedPatient.status}} </p>
+
+            <button class="btn btn-success" (click)="confirmAppointment()">Confirm Appointment</button>
+        </div>
+    }
+</div>

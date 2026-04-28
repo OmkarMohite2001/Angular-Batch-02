@@ -4,7 +4,7 @@ import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { Auth } from '../../services/auth';
+import { Auth } from '../../../core/services/auth';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({

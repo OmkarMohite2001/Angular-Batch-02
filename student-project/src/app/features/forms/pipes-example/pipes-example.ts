@@ -1,8 +1,8 @@
 import { CommonModule, DatePipe, LowerCasePipe, UpperCasePipe } from '@angular/common';
 import { Component } from '@angular/core';
-import { ResultPipe } from './CustomPipe/result-pipe';
-import { GenderPipe } from './CustomPipe/gender-pipe';
-import { StatusPipe } from './CustomPipe/status-pipe';
+import { ResultPipe } from '../../../shared/pipes/result-pipe';
+import { GenderPipe } from '../../../shared/pipes/gender-pipe';
+import { StatusPipe } from '../../../shared/pipes/status-pipe';
 
 @Component({
   selector: 'app-pipes-example',

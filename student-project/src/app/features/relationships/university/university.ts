@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { College } from '../college';
+import { College } from '../models/college';
 import { Colleges } from '../colleges/colleges';
 import { CommonModule } from '@angular/common';
 
