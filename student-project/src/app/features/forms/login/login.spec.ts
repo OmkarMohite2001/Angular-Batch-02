@@ -20,4 +20,9 @@ describe('Login', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have default name ',()=>{
+    const comp = new Login();
+    expect(comp.name).toBe('omkar');
+  })
 });

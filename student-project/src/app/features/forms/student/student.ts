@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, inject, NgZone, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Auth } from '../../../core/services/auth';
 
@@ -8,9 +8,14 @@ import { Auth } from '../../../core/services/auth';
   imports: [FormsModule, CommonModule],
   templateUrl: './student.html',
   styleUrl: './student.css',
+  // changeDetection:ChangeDetectionStrategy.OnPush
 })
 export class Student implements OnInit{
   private authServ = inject(Auth);
+  private cdr = inject(ChangeDetectorRef);
+  private zone = inject(NgZone);
+
+  
   students: any[] = [];
 
   editindex: number = -1;
@@ -24,6 +29,7 @@ export class Student implements OnInit{
   ngOnInit(): void {
     this.getStudentsData();
   }
+ 
   onSubmit(form: any) {
     // if (this.editindex === -1) {
     //   this.students.push(form.value);
@@ -66,6 +72,11 @@ export class Student implements OnInit{
       next:(res:any)=>{
        console.log('Data',res);
         this.students = res.data;
+        // this.cdr.detectChanges();
+        this.cdr.markForCheck();
+  //        this.zone.run(()=>{
+          
+  // })
       },
       error:(err:any)=>{
         console.log('err',err);

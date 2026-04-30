@@ -16,7 +16,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class Login {
 //  constructor(private router : Router,private http:HttpClient
 //   ) {}
-
+  name :string = 'omkar';
     private router = inject(Router);
     // private http = inject(HttpClient);
     private authServ = inject(Auth);
